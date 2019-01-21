@@ -7,6 +7,10 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './main/main.component';
+import { IntegrationGroupComponent } from './integration-group/integration-group.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,14 +18,18 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainComponent,
+    IntegrationGroupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    BsDatepickerModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
