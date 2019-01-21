@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SharedserviceService } from  './../services/sharedservice.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private router:Router) { }
+  message:string;
+  constructor(private formBuilder: FormBuilder, private router:Router, private sharedData: SharedserviceService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     else{
+      this.sharedData.changeMessage("integrationgroup")
       this.router.navigate(['integrationgroup'])
     }
   }

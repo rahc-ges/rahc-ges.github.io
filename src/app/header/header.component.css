@@ -31,4 +31,5 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .form-inline ul li{
     border-bottom: 1px solid #333;
     padding: 10px 0;
+    cursor: pointer;
 }
