@@ -1,0 +1,23 @@
+<header>
+  <h3>Integration Group</h3>
+</header>
+<section>
+  <div class="filterSection row">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <label>Filter By Status</label>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <label>Filter By Date</label>
+      <div class="row">
+      <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <label>Filter By Active</label>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <label>Search</label>
+    </div>
+  </div>
+  
+</section>

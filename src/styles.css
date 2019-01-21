@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.row{
+    margin: 0;
+}
 .ng-valid:not(form) {
     border-left: 5px solid #42A948; /*57A83F*/
   }
