@@ -12,6 +12,7 @@ import { IntegrationGroupComponent } from './integration-group/integration-group
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     LayoutModule,
     BsDatepickerModule.forRoot(),
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],
