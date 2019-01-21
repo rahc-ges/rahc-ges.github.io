@@ -1,10 +1,18 @@
 <header>
-  <h3>Integration Group</h3>
+  <h3 class="heading">Integration Group</h3>
 </header>
 <section>
   <div class="filterSection row">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Status</label>
+      <angular2-multiselect [data]="statusItems" 
+                      [(ngModel)]="selectedItems" 
+                      [settings]="settings" 
+                      (onSelect)="onItemSelect($event)"
+                      (onDeSelect)="OnItemDeSelect($event)" 
+                      (onSelectAll)="onSelectAll($event)" 
+                      (onDeSelectAll)="onDeSelectAll($event)">
+      </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Date</label>
@@ -14,10 +22,44 @@
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Active</label>
+      <angular2-multiselect [data]="activeList" 
+                      [(ngModel)]="selectedItems1" 
+                      [settings]="settings">
+      </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Search</label>
+      <div class="row flex">
+        <input type="text" class="searchInput form-control" />
+        <span class="searchIcon form-control"><i class="fa fa-search"></i></span>
+      </div>
     </div>
   </div>
-  
+</section>
+
+<section>
+    <kendo-grid
+    [data]="gridView"
+    [height]="530"
+    [sortable]="{
+      allowUnsort: allowUnsort,
+      mode: multiple ? 'multiple' : 'single'
+      }"
+    [sort]="sort"
+    (sortChange)="sortChange($event)">
+  <kendo-grid-column field="name" title="Name" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="description" title="Description">
+  </kendo-grid-column>
+  <kendo-grid-column field="active" title="Active" width="230">
+  </kendo-grid-column>
+  <kendo-grid-column field="lastModified" title="Last Modified" width="230">
+  </kendo-grid-column>
+  <kendo-grid-column field="scheduled" title="Scheduled" width="230">
+  </kendo-grid-column>
+  <kendo-grid-column field="status" title="Status" width="230">
+  </kendo-grid-column>
+  <kendo-grid-column field="lastRun" title="Last Run" width="230">
+  </kendo-grid-column>
+</kendo-grid>
 </section>

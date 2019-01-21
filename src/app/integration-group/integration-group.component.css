@@ -7,3 +7,20 @@
     border-radius: 4px;
     box-shadow: in
 }
+.searchInput{
+    width: 82%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.searchIcon{
+    width: 18%;
+    background-color: #027FF4;
+    color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+.heading{
+    margin: 20px 0;
+    font-size: 20px;
+}

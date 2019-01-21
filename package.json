@@ -32,6 +32,7 @@
     "@progress/kendo-data-query": "^1.0.0",
     "@progress/kendo-drawing": "^1.0.0",
     "@progress/kendo-theme-default": "latest",
+    "angular2-multiselect-dropdown": "^4.2.1",
     "bootstrap": "^4.2.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",

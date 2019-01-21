@@ -32,3 +32,16 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+  .ng-valid:not(form) {
+    border-left: 5px solid #42A948; /*57A83F*/
+  }
+  
+  .ng-invalid:not(form) {
+    border-left: 5px solid #a94442; /*E03930*/
+  }
+  .errorMessage {
+    color: #a94442;
+  }
+  .form-control.is-invalid {
+      border-color: #a94442;
+  }

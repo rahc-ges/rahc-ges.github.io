@@ -11,7 +11,7 @@ import { MainComponent } from './main/main.component';
 import { IntegrationGroupComponent } from './integration-group/integration-group.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { FormsModule } from '@angular/forms';
-
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 
@@ -33,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     LayoutModule,
     BsDatepickerModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularMultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
