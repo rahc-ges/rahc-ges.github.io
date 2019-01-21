@@ -13,6 +13,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker'
 import { FormsModule } from '@angular/forms';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     MainComponent,
-    IntegrationGroupComponent
+    IntegrationGroupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
