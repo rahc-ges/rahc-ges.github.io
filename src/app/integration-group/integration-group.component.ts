@@ -9,6 +9,7 @@ import { tableData } from './tableData';
   styleUrls: ['./integration-group.component.css']
 })
 export class IntegrationGroupComponent implements OnInit {
+  multiple: any;
   bsRangeValue: Date[];
   maxDate = new Date();
   bsValue = new Date();
