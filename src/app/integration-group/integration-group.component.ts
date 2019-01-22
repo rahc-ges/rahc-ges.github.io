@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
-import { GridDataResult } from '@progress/kendo-angular-grid';
+import { GridDataResult,PageChangeEvent  } from '@progress/kendo-angular-grid';
 import { tableData } from './tableData';
 
 @Component({
@@ -20,11 +20,13 @@ export class IntegrationGroupComponent implements OnInit {
   settings = {};
   public allowUnsort = true;
     public sort: SortDescriptor[] = [{
-      field: 'ProductName',
+      field: 'name',
       dir: 'asc'
     }];
     public gridView: GridDataResult;
     public tableData: any[] = tableData;
+    public pageSize = 10;
+    public skip = 0;
   constructor() { }
 
   ngOnInit() {
@@ -73,5 +75,16 @@ public sortChange(sort: SortDescriptor[]): void {
   this.sort = sort;
   this.loadtableData();
 }
+private loadItems(): void {
+  this.gridView = {
+      data: this.tableData.slice(this.skip, this.skip + this.pageSize),
+      total: this.tableData.length
+  };
+}
+public pageChange(event: PageChangeEvent): void {
+  this.skip = event.skip;
+  this.loadItems();
+}
+
 
 }

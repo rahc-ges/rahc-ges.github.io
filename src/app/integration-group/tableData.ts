@@ -6,18 +6,30 @@ export const tableData = [{
     "scheduled": "1/15/2019 9:00 AM ",
     "status": "Running",
     "lastRun": "1/15/2019 8:00 AM",
-    "integrationRun": {
-        "integrationName": "Group1",
-        "sourceConnection": "Group1",
-        "targetConnection": "no",
-        "active": '4/6/2018 12:17 AM',
+    "integrationRun": [{
+        "integrationName": "Integration1",
+        "sourceConnection": "A Connection",
+        "targetConnection": "Another connection",
+        "active": 'yes',
         "startRun": "1/15/2019 9:00 AM ",
-        "status": "Running",
+        "status": "Completed",
         "lastRun": "1/15/2019 8:00 AM",
-        "previousStatus": "1/15/2019 9:00 AM ",
-        "payload": "Running",
-        "failure": "1/15/2019 8:00 AM",
-    }
+        "previousStatus": "Completed",
+        "payload": 10,
+        "failure": 0
+    },
+    {
+        "integrationName": "Integration1",
+        "sourceConnection": "A Connection",
+        "targetConnection": "Another connection",
+        "active": 'yes',
+        "startRun": "1/15/2019 9:00 AM ",
+        "status": "Completed",
+        "lastRun": "1/15/2019 8:00 AM",
+        "previousStatus": "Completed",
+        "payload": 10,
+        "failure": 0
+    }]
 },
     {
         "name": "Group2",
@@ -28,16 +40,16 @@ export const tableData = [{
         "status": "Running",
         "lastRun": "1/15/2019 8:00 AM",
         "integrationRun": {
-            "integrationName": "Group1",
-            "sourceConnection": "Group1",
-            "targetConnection": "yes",
-            "active": '4/6/2018 12:17 AM',
+            "integrationName": "Integration1",
+            "sourceConnection": "A Connection",
+            "targetConnection": "Another connection",
+            "active": 'yes',
             "startRun": "1/15/2019 9:00 AM ",
-            "status": "Running",
+            "status": "Completed",
             "lastRun": "1/15/2019 8:00 AM",
-            "previousStatus": "1/15/2019 9:00 AM ",
-            "payload": "Queued",
-            "failure": "1/15/2019 8:00 AM",
+            "previousStatus": "Completed",
+            "payload": 10,
+            "failure": 0
         }
     },
         {
@@ -49,16 +61,16 @@ export const tableData = [{
             "status": "Running",
             "lastRun": "1/15/2019 8:00 AM",
             "integrationRun": {
-                "integrationName": "Group1",
-                "sourceConnection": "Group1",
-                "targetConnection": "yes",
-                "active": '4/6/2018 12:17 AM',
+                "integrationName": "Integration1",
+                "sourceConnection": "A Connection",
+                "targetConnection": "Another connection",
+                "active": 'yes',
                 "startRun": "1/15/2019 9:00 AM ",
-                "status": "Running",
+                "status": "Completed",
                 "lastRun": "1/15/2019 8:00 AM",
-                "previousStatus": "1/15/2019 9:00 AM ",
-                "payload": "Running",
-                "failure": "1/15/2019 8:00 AM",
+                "previousStatus": "Completed",
+                "payload": 10,
+                "failure": 0
             }
         },
             {
@@ -70,16 +82,192 @@ export const tableData = [{
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
                 "integrationRun": {
-                    "integrationName": "Group1",
-                    "sourceConnection": "Group1",
-                    "targetConnection": "yes",
-                    "active": '4/6/2018 12:17 AM',
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
                     "startRun": "1/15/2019 9:00 AM ",
-                    "status": "Running",
+                    "status": "Completed",
                     "lastRun": "1/15/2019 8:00 AM",
-                    "previousStatus": "1/15/2019 9:00 AM ",
-                    "payload": "Completed",
-                    "failure": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
+                }
+            }
+            ,
+            {
+                "name": "Group4",
+                "description": "Group1",
+                "active": "yes",
+                "lastModified": '4/6/2018 12:17 AM',
+                "scheduled": "1/15/2019 9:00 AM ",
+                "status": "Running",
+                "lastRun": "1/15/2019 8:00 AM",
+                "integrationRun": {
+                    "integrationName": "Integration1",
+                    "sourceConnection": "A Connection",
+                    "targetConnection": "Another connection",
+                    "active": 'yes',
+                    "startRun": "1/15/2019 9:00 AM ",
+                    "status": "Completed",
+                    "lastRun": "1/15/2019 8:00 AM",
+                    "previousStatus": "Completed",
+                    "payload": 10,
+                    "failure": 0
                 }
             }
 ];

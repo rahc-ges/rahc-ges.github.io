@@ -38,28 +38,78 @@
 </section>
 
 <section>
+
     <kendo-grid
     [data]="gridView"
+    [selectable]="{enabled: true, checkboxOnly: true}"
     [height]="530"
     [sortable]="{
       allowUnsort: allowUnsort,
       mode: multiple ? 'multiple' : 'single'
       }"
     [sort]="sort"
-    (sortChange)="sortChange($event)">
-  <kendo-grid-column field="name" title="Name" width="80">
+    (sortChange)="sortChange($event)"
+    [pageSize]="pageSize"
+          [skip]="skip"
+          [pageable]="true"
+          (pageChange)="pageChange($event)">
+    <kendo-grid-checkbox-column >
+        <ng-template kendoGridHeaderTemplate let-dataItem>
+            <input 
+                type="checkbox" 
+                name="selectAll"
+                (change)="selectAllRows($event)" 
+                [checked]="allRowsSelected"/>
+        </ng-template>
+      </kendo-grid-checkbox-column>
+      <kendo-grid-column field=action>
+          <ng-template kendoGridCellTemplate>
+          <i class="fa fa-edit"></i>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </ng-template>
+        </kendo-grid-column>
+  <kendo-grid-column field="name">
   </kendo-grid-column>
-  <kendo-grid-column field="description" title="Description">
+  <kendo-grid-column field="description">
   </kendo-grid-column>
-  <kendo-grid-column field="active" title="Active" width="230">
+  <kendo-grid-column field="active" >
   </kendo-grid-column>
-  <kendo-grid-column field="lastModified" title="Last Modified" width="230">
+  <kendo-grid-column field="lastModified" >
   </kendo-grid-column>
-  <kendo-grid-column field="scheduled" title="Scheduled" width="230">
+  <kendo-grid-column field="scheduled">
   </kendo-grid-column>
-  <kendo-grid-column field="status" title="Status" width="230">
+  <kendo-grid-column field="status">
   </kendo-grid-column>
-  <kendo-grid-column field="lastRun" title="Last Run" width="230">
+  <kendo-grid-column field="lastRun">
   </kendo-grid-column>
+  <ng-template kendoGridDetailTemplate let-dataItem>
+      <div *ngIf="dataItem.integrationRun">
+        <div>
+          <span>Integration Name</span>
+          <span>Source Connection</span>
+          <span>Target Connection</span>
+          <span>Active</span>
+          <span>Start Run</span>
+          <span>Status</span>
+          <span>LastRun</span>
+          <span>Previous Status</span>
+          <span>Payload</span>
+          <span>Failure</span>
+        </div>
+        <div *ngFor="let integrationRun of dataItem.integrationRun">
+        <span>{{integrationRun?.integrationName}}</span>
+        <span>{{integrationRun?.sourceConnection}}</span>
+        <span>{{integrationRun?.targetConnection}}</span>
+        <span>{{integrationRun?.active}}</span>
+        <span>{{integrationRun?.startRun}}</span>
+        <span>{{integrationRun?.status}}</span>
+        <span>{{integrationRun?.lastRun}}</span>
+        <span>{{integrationRun?.previousStatus}}</span>
+        <span>{{integrationRun?.payload}}</span>
+        <span>{{integrationRun?.failure}}</span>
+      </div>
+      </div>
+    </ng-template>
 </kendo-grid>
 </section>
+                
