@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef  } from '@angular/core';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 import { GridDataResult,PageChangeEvent  } from '@progress/kendo-angular-grid';
 import { tableData } from './tableData';
-
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-integration-group',
   templateUrl: './integration-group.component.html',
@@ -27,7 +28,12 @@ export class IntegrationGroupComponent implements OnInit {
     public tableData: any[] = tableData;
     public pageSize = 10;
     public skip = 0;
-  constructor() { }
+    modalRef: BsModalRef;
+  constructor(private modalService: BsModalService,private router:Router) {}
+ 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
 
   ngOnInit() {
     this.loadtableData();
@@ -84,6 +90,11 @@ private loadItems(): void {
 public pageChange(event: PageChangeEvent): void {
   this.skip = event.skip;
   this.loadItems();
+}
+
+addData(){
+  console.log('hiii');
+  this.router.navigate(['addshow'])
 }
 
 

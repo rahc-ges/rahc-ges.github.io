@@ -5,26 +5,19 @@
   <div class="filterSection row">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Status</label>
-      <angular2-multiselect [data]="statusItems" 
-                      [(ngModel)]="selectedItems" 
-                      [settings]="settings" 
-                      (onSelect)="onItemSelect($event)"
-                      (onDeSelect)="OnItemDeSelect($event)" 
-                      (onSelectAll)="onSelectAll($event)" 
-                      (onDeSelectAll)="onDeSelectAll($event)">
+      <angular2-multiselect [data]="statusItems" [(ngModel)]="selectedItems" [settings]="settings" (onSelect)="onItemSelect($event)"
+        (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
       </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Date</label>
       <div class="row">
-      <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
-    </div>
+        <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+      </div>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Active</label>
-      <angular2-multiselect [data]="activeList" 
-                      [(ngModel)]="selectedItems1" 
-                      [settings]="settings">
+      <angular2-multiselect [data]="activeList" [(ngModel)]="selectedItems1" [settings]="settings">
       </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
@@ -36,53 +29,49 @@
     </div>
   </div>
 </section>
-
+<button type="button" class="btn btn-primary m-10 " [routerLink]="['/addshow']"><i class="fa fa-plus-circle"></i>&nbsp;Add
+  Show</button> 
 <section>
-
-    <kendo-grid
-    [data]="gridView"
-    [selectable]="{enabled: true, checkboxOnly: true}"
-    [height]="530"
-    [sortable]="{
+  <kendo-grid [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true}" [height]="530" [sortable]="{
       allowUnsort: allowUnsort,
       mode: multiple ? 'multiple' : 'single'
       }"
-    [sort]="sort"
-    (sortChange)="sortChange($event)"
-    [pageSize]="pageSize"
-          [skip]="skip"
-          [pageable]="true"
-          (pageChange)="pageChange($event)">
-    <kendo-grid-checkbox-column >
-        <ng-template kendoGridHeaderTemplate let-dataItem>
-            <input 
-                type="checkbox" 
-                name="selectAll"
-                (change)="selectAllRows($event)" 
-                [checked]="allRowsSelected"/>
-        </ng-template>
-      </kendo-grid-checkbox-column>
-      <kendo-grid-column field=action>
-          <ng-template kendoGridCellTemplate>
-          <i class="fa fa-edit"></i>
-          <i class="fa fa-trash" aria-hidden="true"></i>
-        </ng-template>
-        </kendo-grid-column>
-  <kendo-grid-column field="name">
-  </kendo-grid-column>
-  <kendo-grid-column field="description">
-  </kendo-grid-column>
-  <kendo-grid-column field="active" >
-  </kendo-grid-column>
-  <kendo-grid-column field="lastModified" >
-  </kendo-grid-column>
-  <kendo-grid-column field="scheduled">
-  </kendo-grid-column>
-  <kendo-grid-column field="status">
-  </kendo-grid-column>
-  <kendo-grid-column field="lastRun">
-  </kendo-grid-column>
-  <ng-template kendoGridDetailTemplate let-dataItem>
+    [sort]="sort" (sortChange)="sortChange($event)" [pageSize]="pageSize" [skip]="skip" [pageable]="true" (pageChange)="pageChange($event)">
+    <kendo-grid-checkbox-column>
+        <!-- <ng-template kendoGridToolbarTemplate>
+            <a href="#" class="btn k-button-color" role="button" ><span
+                    class="k-icon k-i-plus-outline"></span>&nbsp;Add
+                Show</a>&nbsp;&nbsp;
+            <button  type="button" class="k-button k-primary" ><span
+                    class="k-icon k-i-delete"></span>&nbsp;Delete
+                Selected Show</button>&nbsp;&nbsp;
+           
+        </ng-template> -->
+      <ng-template kendoGridHeaderTemplate let-dataItem>
+        <input type="checkbox" name="selectAll" (change)="selectAllRows($event)" [checked]="allRowsSelected" />
+      </ng-template>
+    </kendo-grid-checkbox-column>
+    <kendo-grid-column field=action>
+      <ng-template kendoGridCellTemplate>
+        <i class="fa fa-edit"></i>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="name">
+    </kendo-grid-column>
+    <kendo-grid-column field="description">
+    </kendo-grid-column>
+    <kendo-grid-column field="active">
+    </kendo-grid-column>
+    <kendo-grid-column field="lastModified">
+    </kendo-grid-column>
+    <kendo-grid-column field="scheduled">
+    </kendo-grid-column>
+    <kendo-grid-column field="status">
+    </kendo-grid-column>
+    <kendo-grid-column field="lastRun">
+    </kendo-grid-column>
+    <ng-template kendoGridDetailTemplate let-dataItem>
       <div *ngIf="dataItem.integrationRun">
         <div>
           <span>Integration Name</span>
@@ -97,19 +86,18 @@
           <span>Failure</span>
         </div>
         <div *ngFor="let integrationRun of dataItem.integrationRun">
-        <span>{{integrationRun?.integrationName}}</span>
-        <span>{{integrationRun?.sourceConnection}}</span>
-        <span>{{integrationRun?.targetConnection}}</span>
-        <span>{{integrationRun?.active}}</span>
-        <span>{{integrationRun?.startRun}}</span>
-        <span>{{integrationRun?.status}}</span>
-        <span>{{integrationRun?.lastRun}}</span>
-        <span>{{integrationRun?.previousStatus}}</span>
-        <span>{{integrationRun?.payload}}</span>
-        <span>{{integrationRun?.failure}}</span>
-      </div>
+          <span>{{integrationRun?.integrationName}}</span>
+          <span>{{integrationRun?.sourceConnection}}</span>
+          <span>{{integrationRun?.targetConnection}}</span>
+          <span>{{integrationRun?.active}}</span>
+          <span>{{integrationRun?.startRun}}</span>
+          <span>{{integrationRun?.status}}</span>
+          <span>{{integrationRun?.lastRun}}</span>
+          <span>{{integrationRun?.previousStatus}}</span>
+          <span>{{integrationRun?.payload}}</span>
+          <span>{{integrationRun?.failure}}</span>
+        </div>
       </div>
     </ng-template>
-</kendo-grid>
+  </kendo-grid>
 </section>
-                

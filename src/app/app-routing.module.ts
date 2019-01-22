@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IntegrationGroupComponent } from './integration-group/integration-group.component';
 import { LoginComponent } from './login/login.component';
-
+import { ShowAddComponent } from './components/show-add/show-add.component';
 const routes: Routes = [
   {
     path: '', redirectTo: '/login',
@@ -10,6 +10,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'integrationgroup', component: IntegrationGroupComponent },
+  { path: 'addshow', component: ShowAddComponent}
 ];
 
 @NgModule({
