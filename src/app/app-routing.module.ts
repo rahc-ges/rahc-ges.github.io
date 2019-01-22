@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'integrationgroup', component: IntegrationGroupComponent },
-  { path: 'addshow', component: ShowAddComponent}
+  { path: 'addshow/:id', component: ShowAddComponent}
 ];
 
 @NgModule({

@@ -33,7 +33,7 @@
     </div>
   </div>
 </section>
-<button type="button" class="btn btn-primary m-10 " [routerLink]="['/addshow']"><i class="fa fa-plus-circle"></i>&nbsp;Add
+<button type="button" class="btn btn-primary m-10 " [routerLink]="['/addshow', 'add']"><i class="fa fa-plus-circle"></i>&nbsp;Add
   Show</button> 
 <section>
   <kendo-grid [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true}" [height]="530" [sortable]="{
@@ -46,6 +46,7 @@
           [skip]="skip"
           [pageable]="true"
           (pageChange)="pageChange($event)"
+          (edit)="editHandler($event)"
          > 
     <kendo-grid-checkbox-column >
         <ng-template kendoGridHeaderTemplate let-dataItem>
@@ -57,8 +58,8 @@
         </ng-template>
       </kendo-grid-checkbox-column>
       <kendo-grid-column field=action>
-          <ng-template kendoGridCellTemplate>
-          <i class="fa fa-edit"></i>
+          <ng-template kendoGridCellTemplate let-dataItem>
+          <i class="fa fa-edit" [routerLink]="['/addshow', dataItem.name]"></i>
           <i class="fa fa-trash" aria-hidden="true"></i>
         </ng-template>
         </kendo-grid-column>

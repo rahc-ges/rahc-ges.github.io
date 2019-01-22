@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.row{
-    margin: 0;
-}
+
 .k-grid th, .k-grid td{
     border-style: none;
 }
@@ -42,4 +40,10 @@
 }
 .m-10 {
  margin: 10px;
+}
+.m-l-25 {
+    margin-left: 25px;
+}
+.m-l-40 {
+    margin-left: -40px;
 }

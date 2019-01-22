@@ -161,5 +161,9 @@ public dataStateChange(state: DataStateChangeEvent): void {
     //this.gridView = process(this.tableData, this.state);
 }
 
+public editHandler({ dataItem }){
+console.log(dataItem);
+}
+
 
 }
