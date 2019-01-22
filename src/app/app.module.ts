@@ -14,9 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ShowAddComponent } from './components/show-add/show-add.component';
 
-
-
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { LoginComponent } from './login/login.component';
     MainComponent,
     IntegrationGroupComponent,
     LoginComponent,
+    ShowAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +34,11 @@ import { LoginComponent } from './login/login.component';
     BrowserAnimationsModule,
     LayoutModule,
     BsDatepickerModule.forRoot(),
+    ModalModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    AngularMultiSelectModule
+    AngularMultiSelectModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

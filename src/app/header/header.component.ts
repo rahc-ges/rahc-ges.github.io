@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.sharedData.changeMessage("Login")
-    this.router.navigate(['login'])
+    this.router.navigate(['addshow'])
   }
 
 }

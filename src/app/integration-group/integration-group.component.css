@@ -47,4 +47,11 @@
     font-size: 14px;
     text-align: center;
 }
+.addIcon_align{
+    float:right;
+    margin-top: -10px;
 
+}
+.row{
+    margin: 0;
+}

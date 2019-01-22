@@ -22,3 +22,24 @@
     vertical-align: middle;
     font-size: 16px;
 }
+
+.text_align {
+    text-align: right;
+    font-weight: bold;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+.m-10 {
+ margin: 10px;
+}

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SortDescriptor, orderBy, State } from '@progress/kendo-data-query';
 import { GridComponent,GridDataResult,PageChangeEvent,DataStateChangeEvent  } from '@progress/kendo-angular-grid';
 import { tableData } from './tableData';
-
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-integration-group',
   templateUrl: './integration-group.component.html',
@@ -39,7 +40,6 @@ export class IntegrationGroupComponent implements OnInit {
       //   filters: [{ field: 'name', operator: 'contains', value: 'Chef' }]
       // }
   };
-  constructor() { }
 
   ngOnInit() {
     this.loadtableData();

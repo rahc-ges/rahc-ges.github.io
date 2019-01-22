@@ -5,20 +5,15 @@
   <div class="filterSection row">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Status</label>
-      <angular2-multiselect [data]="statusItems" 
-                      [(ngModel)]="selectedItems" 
-                      [settings]="settings" 
-                      (onSelect)="onItemSelect($event)"
-                      (onDeSelect)="OnItemDeSelect($event)" 
-                      (onSelectAll)="onSelectAll($event)" 
-                      (onDeSelectAll)="onDeSelectAll($event)">
+      <angular2-multiselect [data]="statusItems" [(ngModel)]="selectedItems" [settings]="settings" (onSelect)="onItemSelect($event)"
+        (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
       </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Date</label>
       <div class="row">
-      <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
-    </div>
+        <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+      </div>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Active</label>
@@ -38,14 +33,10 @@
     </div>
   </div>
 </section>
-
+<button type="button" class="btn btn-primary m-10 " [routerLink]="['/addshow']"><i class="fa fa-plus-circle"></i>&nbsp;Add
+  Show</button> 
 <section>
-
-    <kendo-grid
-    [data]="gridView"
-    [selectable]="{enabled: true, checkboxOnly: true}"
-    [height]="530"
-    [sortable]="{
+  <kendo-grid [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true}" [height]="530" [sortable]="{
       allowUnsort: allowUnsort,
       mode: multiple ? 'multiple' : 'single'
       }"
@@ -113,6 +104,5 @@
       </div>
       </div>
     </ng-template>
-</kendo-grid>
+  </kendo-grid>
 </section>
-                
