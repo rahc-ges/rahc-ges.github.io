@@ -23,14 +23,16 @@
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Filter By Active</label>
       <angular2-multiselect [data]="activeList" 
-                      [(ngModel)]="selectedItems1" 
+                      [(ngModel)]="selectedItems1"
+                      (onSelect)="onItemSelect($event)"
+                      (onDeSelect)="OnItemDeSelect($event)"  
                       [settings]="settings">
       </angular2-multiselect>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
       <label>Search</label>
       <div class="row flex">
-        <input type="text" class="searchInput form-control" />
+        <input type="text" class="searchInput form-control" [(ngModel)]="searchValue" />
         <span class="searchIcon form-control"><i class="fa fa-search"></i></span>
       </div>
     </div>
@@ -52,7 +54,8 @@
     [pageSize]="pageSize"
           [skip]="skip"
           [pageable]="true"
-          (pageChange)="pageChange($event)">
+          (pageChange)="pageChange($event)"
+         > 
     <kendo-grid-checkbox-column >
         <ng-template kendoGridHeaderTemplate let-dataItem>
             <input 
@@ -74,17 +77,17 @@
   </kendo-grid-column>
   <kendo-grid-column field="active" >
   </kendo-grid-column>
-  <kendo-grid-column field="lastModified" >
+  <kendo-grid-column field="lastModified">
   </kendo-grid-column>
   <kendo-grid-column field="scheduled">
   </kendo-grid-column>
   <kendo-grid-column field="status">
   </kendo-grid-column>
-  <kendo-grid-column field="lastRun">
+  <kendo-grid-column field="lastRun" >
   </kendo-grid-column>
   <ng-template kendoGridDetailTemplate let-dataItem>
-      <div *ngIf="dataItem.integrationRun">
-        <div>
+      <div *ngIf="dataItem.integrationRun" class="integrationRunDiv">
+        <div class="integrationRunHeading">
           <span>Integration Name</span>
           <span>Source Connection</span>
           <span>Target Connection</span>
@@ -96,7 +99,7 @@
           <span>Payload</span>
           <span>Failure</span>
         </div>
-        <div *ngFor="let integrationRun of dataItem.integrationRun">
+        <div *ngFor="let integrationRun of dataItem.integrationRun" class="integrationRunValue">
         <span>{{integrationRun?.integrationName}}</span>
         <span>{{integrationRun?.sourceConnection}}</span>
         <span>{{integrationRun?.targetConnection}}</span>

@@ -39,7 +39,7 @@ export const tableData = [{
         "scheduled": "1/15/2019 9:00 AM ",
         "status": "Running",
         "lastRun": "1/15/2019 8:00 AM",
-        "integrationRun": {
+        "integrationRun": [{
             "integrationName": "Integration1",
             "sourceConnection": "A Connection",
             "targetConnection": "Another connection",
@@ -50,7 +50,7 @@ export const tableData = [{
             "previousStatus": "Completed",
             "payload": 10,
             "failure": 0
-        }
+        }]
     },
         {
             "name": "Group3",
@@ -60,7 +60,7 @@ export const tableData = [{
             "scheduled": "1/15/2019 9:00 AM ",
             "status": "Running",
             "lastRun": "1/15/2019 8:00 AM",
-            "integrationRun": {
+            "integrationRun": [{
                 "integrationName": "Integration1",
                 "sourceConnection": "A Connection",
                 "targetConnection": "Another connection",
@@ -71,7 +71,7 @@ export const tableData = [{
                 "previousStatus": "Completed",
                 "payload": 10,
                 "failure": 0
-            }
+            }]
         },
             {
                 "name": "Group4",
@@ -81,7 +81,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -92,7 +92,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -103,7 +103,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -114,7 +114,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -125,7 +125,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -136,7 +136,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -147,7 +147,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -158,7 +158,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -169,7 +169,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -180,7 +180,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -191,7 +191,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -202,7 +202,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -213,7 +213,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -224,7 +224,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -235,7 +235,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -246,7 +246,7 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
             ,
             {
@@ -257,7 +257,7 @@ export const tableData = [{
                 "scheduled": "1/15/2019 9:00 AM ",
                 "status": "Running",
                 "lastRun": "1/15/2019 8:00 AM",
-                "integrationRun": {
+                "integrationRun": [{
                     "integrationName": "Integration1",
                     "sourceConnection": "A Connection",
                     "targetConnection": "Another connection",
@@ -268,6 +268,6 @@ export const tableData = [{
                     "previousStatus": "Completed",
                     "payload": 10,
                     "failure": 0
-                }
+                }]
             }
 ];

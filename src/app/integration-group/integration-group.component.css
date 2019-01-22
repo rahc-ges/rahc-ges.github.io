@@ -24,3 +24,27 @@
     margin: 20px 0;
     font-size: 20px;
 }
+.integrationRunDiv{
+    border: 1px solid #333;
+    margin: 25px 0;
+    text-align: center;
+}
+.integrationRunHeading{
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+.integrationRunHeading > span,
+.integrationRunValue > span {
+    width: 10%;
+}
+.integrationRunValue{
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
