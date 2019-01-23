@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { tableData } from '../../integration-group/tableData';
 @Component({
   selector: 'app-show-add',
@@ -41,8 +41,8 @@ export class ShowAddComponent implements OnInit {
     this.onSubmit('addnew');
   }
 
-  public checked(){
-    return this.getEditData[0].active === "yes"? true:false;
+  public checked() {
+    return this.getEditData[0].active === "yes" ? true : false;
   }
 
   public toggleEditable(event) {
@@ -58,8 +58,26 @@ export class ShowAddComponent implements OnInit {
     if (this.addForm.invalid) {
       return;
     } else {
+      let object;
       if (data === 'save') {
-        this.router.navigate(['integrationgroup'])
+        if (this.getEditId !== 'add') {
+          let id = {
+            id: this.getEditId,
+            type: 'edit'
+          }
+          object = { ...this.addForm.value, ...id };
+        } else {
+          let id = {
+            type: 'save'
+          }
+          object = { ...this.addForm.value,...id };
+        }
+
+        let navigationExtras: NavigationExtras = {
+          queryParams: object
+
+        };
+        this.router.navigate(['integrationgroup'], navigationExtras)
       } else {
         this.addForm.reset();
       }

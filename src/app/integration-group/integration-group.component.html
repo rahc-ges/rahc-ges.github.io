@@ -35,7 +35,7 @@
 </section>
 <button type="button" class="btn k-button-color m-10 " [routerLink]="['/addshow', 'add']"><i class="fa fa-plus-circle"></i>&nbsp;Add
   Show</button>
-  <button type="button" class="btn k-button-color m-10 "><i class="fa fa-trash"></i>&nbsp;Delete
+  <button type="button" class="btn k-button-color m-10" (click)="deleteGroups()"><i class="fa fa-trash"></i>&nbsp;Delete
     Integration Group</button>
 <section>
   <kendo-grid [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true}" [height]="530" [sortable]="{
@@ -49,6 +49,8 @@
           [pageable]="true"
           (pageChange)="pageChange($event)"
           (edit)="editHandler($event)"
+          [kendoGridSelectBy]="'id'"
+          (selectedKeysChange)="selectedKeysChange($event)"
          > 
     <kendo-grid-checkbox-column >
         <ng-template kendoGridHeaderTemplate let-dataItem>
