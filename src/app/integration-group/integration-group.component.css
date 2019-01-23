@@ -55,3 +55,7 @@
 .row{
     margin: 0;
 }
+.btn:hover {
+    color: #fff; 
+   text-decoration: none;
+}

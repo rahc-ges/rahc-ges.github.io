@@ -1,5 +1,8 @@
 export const tableData = [{
+    "id":1,
     "name": "Group1",
+    "serverName":"IRWS02",
+    "displayName":"INTERN_201601",
     "description": "Group1",
     "active": "yes",
     "lastModified": '4/6/2018 12:17 AM',
@@ -32,7 +35,10 @@ export const tableData = [{
     }]
 },
     {
+        "id":2,
         "name": "Group2",
+        "serverName":"IRWS02",
+        "displayName":"INTERN_201601",
         "description": "Group2",
         "active": "yes",
         "lastModified": '4/6/2018 12:17 AM',
@@ -53,7 +59,10 @@ export const tableData = [{
         }]
     },
         {
+            "id":3,
             "name": "Group3",
+            "serverName":"IRWS02",
+            "displayName":"INTERN_201601",
             "description": "Group3",
             "active": "no",
             "lastModified": '4/6/2018 12:17 AM',
@@ -74,7 +83,10 @@ export const tableData = [{
             }]
         },
             {
+                "id":4,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -96,7 +108,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":5,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -118,7 +133,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":6,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -140,7 +158,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":7,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -162,7 +183,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":8,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -184,7 +208,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":9,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -206,7 +233,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":10,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -228,7 +258,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":11,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',
@@ -250,7 +283,10 @@ export const tableData = [{
             }
             ,
             {
+                "id":12,
                 "name": "Group4",
+                "serverName":"IRWS02",
+                "displayName":"INTERN_201601",
                 "description": "Group1",
                 "active": "yes",
                 "lastModified": '4/6/2018 12:17 AM',

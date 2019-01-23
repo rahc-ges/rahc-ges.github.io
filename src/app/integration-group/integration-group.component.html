@@ -33,8 +33,10 @@
     </div>
   </div>
 </section>
-<button type="button" class="btn btn-primary m-10 " [routerLink]="['/addshow', 'add']"><i class="fa fa-plus-circle"></i>&nbsp;Add
-  Show</button> 
+<button type="button" class="btn k-button-color m-10 " [routerLink]="['/addshow', 'add']"><i class="fa fa-plus-circle"></i>&nbsp;Add
+  Show</button>
+  <button type="button" class="btn k-button-color m-10 "><i class="fa fa-trash"></i>&nbsp;Delete
+    Integration Group</button>
 <section>
   <kendo-grid [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true}" [height]="530" [sortable]="{
       allowUnsort: allowUnsort,
@@ -59,8 +61,8 @@
       </kendo-grid-checkbox-column>
       <kendo-grid-column field=action>
           <ng-template kendoGridCellTemplate let-dataItem>
-          <i class="fa fa-edit" [routerLink]="['/addshow', dataItem.name]"></i>
-          <i class="fa fa-trash" aria-hidden="true"></i>
+          <i class="fa fa-edit" [routerLink]="['/addshow', dataItem.id]"></i>
+          <!-- <i class="fa fa-trash" aria-hidden="true"></i> -->
         </ng-template>
         </kendo-grid-column>
   <kendo-grid-column field="name">
